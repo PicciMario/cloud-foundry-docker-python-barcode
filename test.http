@@ -1,0 +1,4 @@
+# POST https://barcode-docker.cfapps.us10-001.hana.ondemand.com/barcode
+POST http://localhost:3333/barcode
+
+< r44-2686a.pdf
