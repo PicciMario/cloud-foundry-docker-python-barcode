@@ -37,3 +37,6 @@ https://adamtheautomator.com/flask-web-server/
 https://blogs.sap.com/2021/01/02/deploy-python-application-on-sap-cloud-platform-using-docker-container/
 
 https://techtutorialsx.com/2020/01/01/python-pyzbar-detecting-and-decoding-barcode/
+
+Servizio gratuito per generare immagini di barcode in diversi formati
+https://barcode.tec-it.com
