@@ -3,6 +3,9 @@ from flask import Flask, request
 from pyzbar import pyzbar
 import pdf2image
 import json
+from cfenv import AppEnv
+
+env = AppEnv()
 
 app = Flask(__name__)
 # port = int(os.environ.get('PORT', 3000))
@@ -10,7 +13,7 @@ port = 3333
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    return f"Hello World ({env.name}, {env.port})"
 
 @app.route("/barcode", methods=['POST'])
 def barcode():

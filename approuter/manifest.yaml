@@ -1,0 +1,20 @@
+---
+applications:
+- name: barcode-docker-approuter
+  path: /
+  memory: 128M
+  routes:
+    - route: barcode-docker-approuter.cfapps.us10-001.hana.ondemand.com
+  buildpacks:
+    - nodejs_buildpack
+  env:
+    destinations: > 
+      [
+        {
+          "name":"dest-barcode-docker", 
+          "url" :"https://barcode-docker-ottimismo.cfapps.us10-001.hana.ondemand.com", 
+          "forwardAuthToken": true
+        }
+      ]
+  services:
+    - barcode-docker-xsuaa

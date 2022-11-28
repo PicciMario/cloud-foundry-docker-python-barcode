@@ -1,0 +1,12 @@
+---
+applications:
+  - name: barcode-docker
+    memory: 512MB
+    disk_quota: 512MB
+    routes:
+      - route: barcode-docker-ottimismo.cfapps.us10-001.hana.ondemand.com
+    docker:
+      image: piccimario/barcode-cf:latest
+      username: piccimario
+    services:
+      - barcode-docker-xsuaa
