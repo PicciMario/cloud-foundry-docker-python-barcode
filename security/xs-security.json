@@ -3,26 +3,26 @@
 	"tenant-mode": "dedicated",
 	"scopes": [
 		{
-			"name": "$XSAPPNAME.read",
-			"description": "With this scope, USER can read products."
+			"name": "$XSAPPNAME.hello",
+			"description": "Hello scope."
 		}
 	],
 
 	"role-templates": [
 		{
-			"name": "Viewer",
-			"description": "Role to get the list of products",
+			"name": "HelloRole",
+			"description": "Role to say hello.",
 			"scope-references": [
-				"$XSAPPNAME.read"
+				"$XSAPPNAME.hello"
 			]
 		}
 	],
 	"role-collections": [
 		{
-			"name": "ProductListViewer",
-			"description": "Product List Viewer",
+			"name": "HelloCollection",
+			"description": "Role collection to say hello.",
 			"role-template-references": [
-				"$XSAPPNAME.Viewer"
+				"$XSAPPNAME.HelloRole"
 			]
 		}
 	],

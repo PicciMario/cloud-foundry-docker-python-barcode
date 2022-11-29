@@ -24,7 +24,7 @@ def hello():
 	auth_token = auth_header.split(" ")[1]
 	security_context = xssec.create_security_context(auth_token, uaa_service)
 
-	isAuthorized = security_context.check_scope(f"{uaa_service['xsappname']}.read")
+	isAuthorized = security_context.check_scope(f"{uaa_service['xsappname']}.hello")
 
 	return f"Benvenuto {security_context.get_logon_name()}, {isAuthorized}"
 
